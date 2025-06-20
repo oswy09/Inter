@@ -1,17 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Seguro de Vida Deudor AXA COLPATRIA | Póliza VIM Deudor</title>
     <meta name="description" content="Adquiere el seguro de Vida Deudor de AXA COLPATRIA. Cubre el saldo de tu deuda caso de fallecimiento o incapacidad total y permanente. | Póliza VIM Deudor">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="fonts/SourceSansPro-Regular.woff2" type="font/woff2">
-    <link rel="stylesheet" href="fonts/SourceSansPro-Regular.woff" type="font/woff">
-    <link rel="stylesheet" href="fonts/SourceSansPro-Regular.ttf" type="font/truetype">
-    <link rel="stylesheet" href="fonts/Publico_Banner_Web_Bold_Regular.woff2" type="font/woff2">
-    <link rel="stylesheet" href="fonts/Publico_Banner_Web_Bold_Regular.woff" type="font/woff">
     <link rel="stylesheet" href="assets/styles-icons.css">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <meta property="og:locale" content="es_ES">
@@ -58,64 +54,66 @@
 /* ================================ */
 /* 1. Fuentes Personalizadas        */
 /* ================================ */
-   
+
 /* Definición de la fuente Publico Headline Bold */
 @font-face {
     font-family: 'Publico Headline Web';
-    src: url('./Fonts/PublicoHeadline-Bold-Web.woff2') format('woff2'),
-         url('./Fonts/PublicoHeadline-Bold-Web.woff') format('woff');
+    src: url('https://res.cloudinary.com/ddqbnr9vo/raw/upload/v1750205331/PublicoHeadline-Bold-Web_nry0md.woff') format('woff'),
+         url('https://res.cloudinary.com/ddqbnr9vo/raw/upload/v1750205338/PublicoHeadline-Bold-Web_nphjdn.woff2') format('woff2'),
+         url('https://res.cloudinary.com/ddqbnr9vo/raw/upload/v1750205412/Publico_Banner_Web_Bold_Regular_qpj3p5.OTF') format('opentype'); /* Agregué .OTF y su formato */
     font-weight: 700;
     font-style: normal;
-  }
-  
-  /* Definición de la fuente Source Sans Pro Regular */
-  @font-face {
+    font-display: swap; /* Buena práctica para mejorar el rendimiento de carga de fuentes */
+}
+
+/* Definición de la fuente Source Sans Pro Regular */
+@font-face {
     font-family: 'Source Sans Pro';
-    src: url('../fonts/SourceSansPro-Regular.woff2') format('woff2');  
-    font-weight: 400;
+    src: url('https://res.cloudinary.com/ddqbnr9vo/raw/upload/v1750205408/SourceSansPro-Regular_rgdf3d.ttf') format('truetype'); /* Solo tienes .ttf para esta en tus enlaces */
+    font-weight: 400; /* Regular */
     font-style: normal;
-  }
-  
-  /* Definición de la fuente Source Sans Pro SemiBold */
-  @font-face {
+    font-display: swap; /* Buena práctica para mejorar el rendimiento de carga de fuentes */
+}
+
+/* Nota: Para Source Sans Pro SemiBold, necesitarías subir el archivo correspondiente y crear otra regla @font-face */
+/* @font-face {
     font-family: 'Source Sans Pro';
-    src: url('../fonts/SourceSansPro-SemiBold.woff2') format('woff2');  
-    font-weight: 600;  
+    src: url('URL_SEMI_BOLD_WOFF2') format('woff2');
+    font-weight: 600;
     font-style: normal;
-  }
-  
-  /* Aplicar Publico Headline a los títulos */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Publico Headline Web', sans-serif;
+    font-display: swap;
+} */
+
+/* Aplicar Publico Headline a los títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Publico Headline Web', sans-serif; /* Mantenemos 'sans-serif' como fallback */
     font-weight: 700;
     font-style: normal;
-  }
-  
-  /* Aplicar Source Sans Pro al body y otros textos */
-  body {
+}
+
+/* Aplicar Source Sans Pro al body y otros textos */
+body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400; /* Regular */
-  }
-  
-  p, a, li, span, div {
+}
+
+p, a, li, span, div {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-  }
+}
 
 /* ================================ */
 /* 2. Reset de Estilos              */
 /* ================================ */
 
- 
 body, h1, h2, h3, p, div, section, header {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color:  #343C3D;
+    color: #343C3D;
 }
 
 body {
-   
     line-height: 1.6;
     background-color: #fff;
 }
@@ -136,54 +134,49 @@ body {
 }
 
 /* ================================ */
-/* 4. Banner Section                  */
+/* 4. Banner Section                */
 /* ================================ */
 .hero {
-  position: relative;
-  height: 40.25vw;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 5%;
-  color: #fff;
-  text-align: left;
-  overflow: hidden;
+    position: relative;
+    height: 40.25vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    color: #fff;
+    text-align: left;
+    overflow: hidden;
 }
 
 .hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
-
-
 
 @media (max-width: 768px) {
-  
     .hero {
-  padding: 0;
-  margin: 0;
-  min-height: 392px;
-}
+        padding: 0;
+        margin: 0;
+        min-height: 392px;
+    }
   
     .hero-image {
-    content: url('./images/Banner-credito-movil.webp');
-    width: 100%;
-    height: auto;
-    max-height: 100vh;
-    object-fit: cover;
-    object-position: center center;
-    
-     
-  }
+        content: url('./images/Banner-credito-movil.webp');
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+        object-fit: cover;
+        object-position: center center;
+    }
 }
 
 /* ================================ */
-/* 5. Vida deudor Section                 */
+/* 5. Vida deudor Section           */
 /* ================================ */
 
 .information-axa {
@@ -197,8 +190,8 @@ body {
     font-weight: bold;
     line-height: 2.5rem;
     margin-bottom: 25px;
-   
 }
+
 .seguro-vida-deudor {
     display: flex;
     flex-wrap: wrap;
@@ -208,9 +201,8 @@ body {
     width: 80%;
 }
 
-
 .seguro-vida-deudor p {
-font-size: 20px;
+    font-size: 20px;
 }
 
 .imagen-container {
@@ -246,6 +238,7 @@ font-size: 20px;
 .boton-info:hover {
     background-color: #1F1F9C;  
 }
+
 /* Responsive */
 @media (max-width: 768px) {
     .seguro-vida-deudor {
@@ -254,7 +247,7 @@ font-size: 20px;
     }
 
     .seguro-vida-deudor h1 {
-       font-size: 30px;
+        font-size: 30px;
     }
 
     .imagen-container {
@@ -264,14 +257,14 @@ font-size: 20px;
     .texto-container {
         text-align: center;
     }
-}
-.imagen-container img {
-    max-width: 60%;
-     
+    
+    .imagen-container img {
+        max-width: 60%;
+    }
 }
 
 /* ================================ */
-/* 6. step Section   */
+/* 6. step Section                  */
 /* ================================ */
 
 .cont-six {
@@ -283,26 +276,24 @@ font-size: 20px;
     margin-top: 50px;
 }
 
-
-
 .six-step {
     display: flex;
     background-color: #f0f0f05c;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .left h2 {
-font-size: 36px;
-color: #343C3D;
+    font-size: 36px;
+    color: #343C3D;
 }
+
 .column {
     padding: 20px;
 }
 
 .left {
-   
     width: 40%;
     display: flex;
     align-items: center;
@@ -317,11 +308,9 @@ color: #343C3D;
     align-items: flex-start;  
 }
 
-.right h3
-{
-  color: #00008F;
+.right h3 {
+    color: #00008F;
 }
-
 
 .step {
     display: flex;
@@ -336,10 +325,7 @@ color: #343C3D;
     width: 40px;
     height: 40px;
     margin-right: 15px;
- 
 }
-
-
 
 .bg {
     fill: #FFF;
@@ -385,28 +371,28 @@ color: #343C3D;
 /* Responsive */
 @media (max-width: 768px) {
     .cont-six {
-       
         width: 95%;
     }
-    .cont-six h2{
+    
+    .cont-six h2 {
         font-size: 30px;
     }
-    .six-step{
+    
+    .six-step {
         flex-direction: column;
     }
 
     .column {
         width: 100%;
     }
-    .left{
+    
+    .left {
         text-align: center;
     }
-   
 }
 
-
 /* ================================ */
-/* 7. Requisitos section */
+/* 7. Requisitos section            */
 /* ================================ */
 
 .requisitos {
@@ -418,78 +404,76 @@ color: #343C3D;
     width: 80%;  
     margin-left: auto;  
     margin-right: auto;
-  }
+}
  
-  .requisitos-titulo {
+.requisitos-titulo {
     text-align: center;  
     margin-bottom: 30px;
     width: 100%;  
-  }
+}
  
-  .requisitos-titulo h2 {
+.requisitos-titulo h2 {
     font-size: 36px;
     color: #343c3d;
-  }
+}
  
-  .requisitos-container {
+.requisitos-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;  
     gap: 20px;
     width: 100%;  
-  }
+}
  
-  .requisito-card {
+.requisito-card {
     width: calc(33.33% - 20px);
     text-align: center;  
     padding: 20px;
-  }
+}
  
-  .requisito-card i {
+.requisito-card i {
     font-size: 58px;
     color: #00008b;
     margin-bottom: 10px;
-  }
+}
  
-  .requisito-card h3 {
+.requisito-card h3 {
     font-size: 18px;
     margin-bottom: 5px;
     color: #00008b;
     text-transform: uppercase;
     font-family: 'Source Sans Pro';
-  }
+}
  
-  .requisito-card p {
+.requisito-card p {
     font-size: 18px;
     color: #333;
-  }
+}
  
 /* Responsive */
-  @media (max-width: 745px) {
+@media (max-width: 745px) {
     .requisito-card {
-      width: calc(50% - 20px);
+        width: calc(50% - 20px);
     }
  
     .requisitos {
-      align-items: center;  
+        align-items: center;  
     }
  
     .requisitos-titulo {
-      text-align: center;  
+        text-align: center;  
     }
  
     .requisitos-container {
-      justify-content: center;  
+        justify-content: center;  
     }
-  }
+}
  
-  @media (max-width: 525px) {
+@media (max-width: 525px) {
     .requisito-card {
-      width: 100%;
+        width: 100%;
     }
-  }
- 
-
+}
 
 /* ================================ */
 /* 8. Floating Form Section         */
@@ -535,8 +519,8 @@ color: #343C3D;
 /* Botón flotante para reabrir el formulario */
 .floating-button {
     position: fixed;
-    bottom: 10px;  
-    right: 180px;
+    bottom: 10px;
+    right: 40px;
     background-color: #d24723;
     color: white;
     border: none;
@@ -549,9 +533,11 @@ color: #343C3D;
     transition: opacity 0.3s ease-in-out;
     text-transform: uppercase;
     z-index: 99;
+    width: auto;
+    max-width: 28rem;
 }
 
-.floating-button:hover{
+.floating-button:hover {
     background-color: #D75D3D;
 }
 
@@ -628,13 +614,16 @@ label {
 }
 
 input,
-select {
+select,
+textarea {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #d1d5db;
     border-radius: 0.375rem;
     margin-top: 0.25rem;
     box-sizing: border-box;
+    font-size: 14px; /* Desktop size */
+    -webkit-appearance: none;
 }
 
 .flex {
@@ -646,6 +635,7 @@ select {
 .flex-center {
     justify-content: center;
 }
+
 .flex-checkbox {
     display: flex;
     align-items: center;
@@ -710,7 +700,51 @@ textarea:focus {
     box-shadow: 0 0 5px #00008F;
     outline: none;
 }
+/* Estilos mejorados para checkboxes */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.3s ease;
+}
 
+/* Estado checked del checkbox */
+input[type="checkbox"]:checked {
+    background-color: #00008F;
+    border-color: #00008F;
+}
+
+/* Crear el "chulito" cuando está checked */
+input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Hover effect */
+input[type="checkbox"]:hover {
+    border-color: #00008F;
+    box-shadow: 0 0 3px rgba(0, 0, 143, 0.3);
+}
+
+/* Focus effect */
+input[type="checkbox"]:focus {
+    outline: none;
+    border-color: #00008F;
+    box-shadow: 0 0 5px rgba(0, 0, 143, 0.5);
+}
 /* Estilos para los errores  */
 .error-message {
     color: #C91432;
@@ -775,11 +809,10 @@ select#Método\ de\ contacto {
     border-color: #1CC54F;
 }
 
-
-
 .dropdown-header .seleccionado {
     color: #718096;  
 }
+
 .dropdown-lista {
     list-style: none;
     padding: 0;
@@ -831,6 +864,7 @@ select#Método\ de\ contacto {
 .dropdown-lista li input[type="checkbox"]:active {
     background-color: transparent; 
 }
+
 .dropdown-header .arrow-down {
     font-size: 0.8rem;
     color: #718096;
@@ -841,6 +875,7 @@ select#Método\ de\ contacto {
     font-size: 14px;
     line-height: 1;
 }
+
 /* Estilos para ocultar el select original */
 select#Método\ de\ contacto {
     display: none;
@@ -867,28 +902,31 @@ select:not(#Método\ de\ contacto) {
     }
 }
 
+/* Estilos para la barra de desplazamiento */
+.container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #b8b8b8;
+    border-radius: 4px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        position: fixed; /* Fija el contenedor en la pantalla */
+        position: fixed;
         left: 0;
         right: 0;
         bottom: 0;
-        max-height: 62%; /* Altura máxima del formulario */
+        max-height: 65%;
         background-color: white;
         z-index: 10;
-        display: flex; /* Usamos flexbox para organizar el encabezado y el formulario */
-        flex-direction: column; /* Los elementos se apilan verticalmente */
-    }
-
-    container::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    container::-webkit-scrollbar-thumb {
-        background-color: #b8b8b8;
-        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
     }
 
     .header-form {
@@ -898,36 +936,46 @@ select:not(#Método\ de\ contacto) {
         color: white;
         z-index: 20;
         padding: 25px 10px;
-        flex-shrink: 0;  
+        flex-shrink: 0;
     }
 
     #miFormulario {
-        flex-grow: 1;  
-        overflow-y: auto;  
+        flex-grow: 1;
+        overflow-y: auto;
         overflow-x: hidden;
+        padding: 15px;
         padding-right: 15px;
+        -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
+        position: relative;
     }
 
-    /* Estilo para el "pulgar"   */
+    /* SOLUCIÓN SIMPLIFICADA PARA iOS - Solo font-size 16px */
+    #miFormulario input:not([type="checkbox"]),
+    #miFormulario select,
+    #miFormulario textarea,
+    .dropdown-header {
+        font-size: 16px !important;
+    }
+
+    /* Scrollbar styles */
+    #miFormulario::-webkit-scrollbar {
+        width: 8px;
+    }
+
     #miFormulario::-webkit-scrollbar-thumb {
-        background-color: #99a5b6;  
+        background-color: #99a5b6;
         border-radius: 4px;
     }
 
-    /* Estilo para el "track"  */
     #miFormulario::-webkit-scrollbar-track {
-        background-color: #f0f0f0;  
-    }
-
-    /* Estilo para el grosor de la barra de scroll */
-    #miFormulario::-webkit-scrollbar {
-        width: 8px;  
+        background-color: #f0f0f0;
     }
 
     .floating-button {
         position: fixed;
         left: 50%;
-        bottom: 10px;  
+        bottom: 10px;
         transform: translateX(-50%);
         width: 90%;
         max-width: 300px;
@@ -937,16 +985,8 @@ select:not(#Método\ de\ contacto) {
     }
 }
 
-    .form-group input,
-    .form-group select {
-        width: 100%;
-    }
-
-
-
-
 /* ================================ */
-/* 9. Footer                       */
+/* 9. Footer                        */
 /* ================================ */
 .footer {
     background-color: #4976BA;
@@ -1063,7 +1103,7 @@ select:not(#Método\ de\ contacto) {
     .footer-container {
         flex-direction: column;
         align-items: stretch;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem;s
         text-align: left;  
     }
 
@@ -1093,16 +1133,14 @@ select:not(#Método\ de\ contacto) {
         display: none;  
     }
   
-.footer-column ul li,
-.footer-column p {
-    text-align: left;
-}
+    .footer-column ul li,
+    .footer-column p {
+        text-align: left;
+    }
 
     .footer-column.open ul {
         display: block;  
     }
-
-   
 
     .footer-social {
         flex-direction: column;
@@ -1120,13 +1158,12 @@ select:not(#Método\ de\ contacto) {
     .dropdown-arrow {
         display: inline-block;
     }
+    
     .salud-footer {
         position: static;
         margin-top: 0;
     }
 }
-
-
 
 
 </style>
@@ -1403,7 +1440,61 @@ select:not(#Método\ de\ contacto) {
         </div>
     </form>
 </div>
+ <script id="smartcapture-script-h53y62haodu">
+ var scFormLoaded = function () {
+ 
+%%[
 
+SET @nombres = RequestParameter("nombres")
+SET @apellidos = RequestParameter("apellidos")
+SET @Correo = RequestParameter("Correo")
+SET @Celular = RequestParameter("Celular")
+
+SET @URL = CONCAT('https://online.axacolpatria.co/ThankYouPageVimDeudor?&nombres=',@nombres,'&apellidos=',@apellidos, '&Correo=', @Correo,'&Celular=', @Celular) 
+
+]%%   
+   window.ScForm.init({"gearID":"h53y62haodu","smartCaptureFormID":0,"sourceKey":"B31B0A84-9F86-4F5C-9C56-7C52C6A3451E","source":"dataExtension","triggeredSend":"","confirmationMessage":"Thank you for your submission.","buttonText":"Enviar","formStyling":{"background-color":"transparent","margin-top":"0px","margin-right":"0px","margin-bottom":"0px","margin-left":"0px","padding-top":"0px","padding-right":"0px","padding-bottom":"0px","padding-left":"0px","text-align":"left"},"fieldStyling":{"width":"200px"},"buttonStyling":{"background-color":"#009DDC","border-color":"#009DDC","border-radius":"3px","border-style":"solid","-webkit-border-radius":"3px","-moz-border-radius":"3px","color":"#FFFFFF","font-family":"Arial, Helvetica, sans-serif","font-size":"16px","line-height":"normal","padding":"10px"}, "onSubmitShouldGotoUrl":true,"onSubmitGotoUrlType":2,"onSubmitGotoUrl":"https://online.axacolpatria.co/ThankYouPageVimDeudor"});
+ };
+ var scAppDomain = 'cloudpages.mc-content.com';
+ var scAppBasePath = '/CloudPages';
+ (function () {
+  var appDomain = '<ctrl:eval>Platform.Variable.GetValue("@appDomain")</ctrl:eval>';
+  if (appDomain.indexOf('qa') !== -1) {
+   scAppDomain = 'cloudpages-qa.mc-content.com';
+   scAppBasePath = '/CloudPages_V1';
+  }
+ }());
+ window.appDomain = window.appDomain || scAppDomain;
+ window.contentDetail = window.contentDetail || <ctrl:eval>Platform.Variable.GetValue('@contentDetail')||{}</ctrl:eval>;
+ if (!window.ScForm || !window.ScForm.init) {
+  var head = document.getElementsByTagName('head')[0];
+  var id = 'smartcapture-formjs-script';
+  var script = document.getElementById(id);
+  var domain = window.appDomain;
+  var el;
+  if (!script) {
+   if (domain) {
+    domain = '//' + domain;
+   }
+   el = document.createElement('script');
+   el.async = true;
+   el.id = id;
+   el.src = domain + scAppBasePath + '/lib/smartcapture-formjs.js';
+   el.onload = scFormLoaded;
+   head.appendChild(el);
+  } else {
+   if (script.addEventListener) {
+    script.addEventListener('load', scFormLoaded);
+   } else if (script.attachEvent) {
+    script.attachEvent('onload', scFormLoaded);
+   }
+  }
+ } else {
+  scFormLoaded();
+ }
+</script>
+    </form>
+</div>
 <button id="botonUnirme" class="floating-button oculto">Quiero unirme</button>
 
  <!-- Footer Section -->
@@ -1462,232 +1553,289 @@ select:not(#Método\ de\ contacto) {
    
 <script>
 
- // Animación step section
-const steps = document.querySelectorAll('.step');
-const lineProgress = document.querySelector('.line-progress');
-const contSix = document.querySelector('.cont-six');
 
-function showStep(index) {
-    if (index < steps.length) {
-        steps[index].style.opacity = 1;
-        const progress = steps[index].dataset.progress;
-        const offset = 113.1 - (113.1 * progress / 100);
-        steps[index].querySelector('.progress').style.strokeDashoffset = offset;
-
-        let totalHeight = 0;
-        steps.forEach(step => {
-            totalHeight += step.offsetHeight;
-        });
-
-        let currentHeight = 0;
-        for (let i = 0; i <= index; i++) {
-            currentHeight += steps[i].offsetHeight;
-        }
-
-        lineProgress.style.height = currentHeight + 'px';
-
-        setTimeout(() => {
-            if (index < steps.length - 1) {
-                showStep(index + 1);
-            } else {
-                lineProgress.style.height = totalHeight + 'px';
+// REEMPLAZAR TODO el script con esta versión ultra simplificada
+document.addEventListener('DOMContentLoaded', function() {
+    // Animación step section
+    const steps = document.querySelectorAll('.step');
+    const lineProgress = document.querySelector('.line-progress');
+    const contSix = document.querySelector('.cont-six');
+    
+    function showStep(index) {
+        if (index < steps.length) {
+            steps[index].style.opacity = 1;
+            const progress = steps[index].dataset.progress;
+            const offset = 113.1 - (113.1 * progress / 100);
+            steps[index].querySelector('.progress').style.strokeDashoffset = offset;
+            
+            let totalHeight = 0;
+            steps.forEach(step => {
+                totalHeight += step.offsetHeight;
+            });
+            
+            let currentHeight = 0;
+            for (let i = 0; i <= index; i++) {
+                currentHeight += steps[i].offsetHeight;
             }
-        }, 1000);
-    }
-}
-
-function startAnimation() {
-    setTimeout(() => {
-        showStep(0);
-    }, 100);
-}
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            startAnimation();
-            observer.unobserve(contSix);
+            
+            lineProgress.style.height = currentHeight + 'px';
+            
+            setTimeout(() => {
+                if (index < steps.length - 1) {
+                    showStep(index + 1);
+                } else {
+                    lineProgress.style.height = totalHeight + 'px';
+                }
+            }, 1000);
         }
-    });
-}, { threshold: 0.1 });  
-
-observer.observe(contSix);
-
-// Formulario
-const formulario = document.getElementById('miFormulario');
-const formContainer = document.getElementById('formContainer');
-const botonUnirme = document.getElementById('botonUnirme');
-const cerrarFormulario = document.getElementById('cerrarFormulario');
-const dropdownSimulado = document.querySelector('.dropdown-simulado');
-const dropdownHeader = dropdownSimulado.querySelector('.dropdown-header');
-const dropdownLista = dropdownSimulado.querySelector('.dropdown-lista');
-const seleccionadoSpan = dropdownHeader.querySelector('.seleccionado');
-const checkBoxes = dropdownLista.querySelectorAll('input[type="checkbox"]');
-const inputHidden = document.getElementById('Metodo_Contacto'); // input hidden
-
-// Función para validar un campo
-function validarCampo(campo) {
-    const errorSpan = document.getElementById('error-' + campo.id.replace('Metodo_Contacto', 'tipo-contacto'));
-    let mensajeError = '';
-
-    if (campo.id === 'Metodo_Contacto') {
-        const opcionesMarcadas = Array.from(checkBoxes).filter(cb => cb.checked);
-        if (opcionesMarcadas.length === 0) {
-            mensajeError = 'Debe seleccionar al menos un método de contacto';
-            dropdownSimulado.classList.add('error');
-            dropdownSimulado.classList.remove('valid');
-        } else {
-            dropdownSimulado.classList.remove('error');
-            dropdownSimulado.classList.add('valid');
+    }
+    
+    function startAnimation() {
+        setTimeout(() => {
+            showStep(0);
+        }, 100);
+    }
+    
+    if (contSix) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startAnimation();
+                    observer.unobserve(contSix);
+                }
+            });
+        }, { threshold: 0.1 });  
+        
+        observer.observe(contSix);
+    }
+    
+    // Formulario
+    const formulario = document.getElementById('miFormulario');
+    const formContainer = document.getElementById('formContainer');
+    const botonUnirme = document.getElementById('botonUnirme');
+    const cerrarFormulario = document.getElementById('cerrarFormulario');
+    
+    if (formulario) {
+        const dropdownSimulado = document.querySelector('.dropdown-simulado');
+        const dropdownHeader = dropdownSimulado ? dropdownSimulado.querySelector('.dropdown-header') : null;
+        const dropdownLista = dropdownSimulado ? dropdownSimulado.querySelector('.dropdown-lista') : null;
+        const seleccionadoSpan = dropdownHeader ? dropdownHeader.querySelector('.seleccionado') : null;
+        const checkBoxes = dropdownLista ? dropdownLista.querySelectorAll('input[type="checkbox"]') : [];
+        const inputHidden = document.getElementById('Metodo_Contacto');
+        
+        // Función para validar un campo
+        function validarCampo(campo) {
+            const errorSpanId = (campo.id === 'Metodo_Contacto') ? 'error-tipo-contacto' : 'error-' + campo.id;
+            const errorSpan = document.getElementById(errorSpanId);
+            let mensajeError = '';
+            
+            if (campo.id === 'Metodo_Contacto') {
+                const opcionesMarcadas = Array.from(checkBoxes).filter(cb => cb.checked);
+                if (opcionesMarcadas.length === 0) {
+                    mensajeError = 'Debe seleccionar al menos un método de contacto';
+                    if (dropdownSimulado) {
+                        dropdownSimulado.classList.add('error');
+                        dropdownSimulado.classList.remove('valid');
+                    }
+                } else {
+                    if (dropdownSimulado) {
+                        dropdownSimulado.classList.remove('error');
+                        dropdownSimulado.classList.add('valid');
+                    }
+                }
+            } else if (campo.type === 'checkbox') {
+                if (!campo.checked) {
+                    mensajeError = 'Debe aceptar este campo';
+                }
+            } else if (!campo.value.trim()) {
+                mensajeError = 'Este campo es obligatorio';
+            } else if (campo.id === 'correo' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(campo.value)) {
+                mensajeError = 'El correo no cumple con un formato válido';
+            } else if (campo.id === 'telefono' && !/^\d+$/.test(campo.value)) {
+                mensajeError = 'El teléfono debe contener solo números';
+            }
+            
+            if (mensajeError) {
+                campo.classList.add('error');
+                campo.classList.remove('valid');
+                if (errorSpan) errorSpan.textContent = mensajeError;
+                return false;
+            } else {
+                campo.classList.remove('error');
+                campo.classList.add('valid');
+                if (errorSpan) errorSpan.textContent = '';
+                return true;
+            }
         }
-    } else if (!campo.value) {
-        mensajeError = 'Este campo es obligatorio';
-    } else if (campo.id === 'correo' && !campo.value.includes('@')) {
-        mensajeError = 'El correo no cumple con un formato valido';
-    } else if (campo.id === 'telefono' && isNaN(campo.value)) {
-        mensajeError = 'El teléfono debe contener solo números';
-    }
-
-    if (mensajeError) {
-        campo.classList.add('error');
-        campo.classList.remove('valid');
-        errorSpan.textContent = mensajeError;
-        return false;
-    } else {
-        campo.classList.remove('error');
-        campo.classList.add('valid');
-        errorSpan.textContent = '';
-        return true;
-    }
-}
-
-// Inicializar valor del input hidden y texto mostrado
-function inicializarSeleccion() {
-    const opcionesMarcadas = Array.from(checkBoxes)
-        .filter(cb => cb.checked)
-        .map(cb => cb.value);
-
-    if (opcionesMarcadas.length === checkBoxes.length) {
-        seleccionadoSpan.textContent = 'Todos';
-    } else if (opcionesMarcadas.length > 0) {
-        seleccionadoSpan.textContent = opcionesMarcadas.join(', ');
-    } else {
-        seleccionadoSpan.textContent = 'Seleccionar';
-    }
-
-    inputHidden.value = opcionesMarcadas.join(',');
-    validarCampo(inputHidden);
-}
-
-// Evento para abrir/cerrar dropdown
-dropdownHeader.addEventListener('click', () => {
-    dropdownLista.classList.toggle('open');
-    if (dropdownLista.classList.contains('open')) {
-        dropdownHeader.style.borderColor = '#00008F';
-        dropdownHeader.style.boxShadow = '0 0 5px #00008F';
-    } else {
-        dropdownHeader.style.borderColor = '';
-        dropdownHeader.style.boxShadow = '';
-    }
-});
-
-// Evento para actualizar selección al cambiar checkboxes
-dropdownLista.addEventListener('click', (event) => {
-    if (event.target.type === 'checkbox') {
-        const opcionesMarcadas = Array.from(checkBoxes)
-            .filter(cb => cb.checked)
-            .map(cb => cb.value);
-
-        if (opcionesMarcadas.length === checkBoxes.length) {
-            seleccionadoSpan.textContent = 'Todos';
-        } else if (opcionesMarcadas.length > 0) {
-            seleccionadoSpan.textContent = opcionesMarcadas.join(', ');
-        } else {
-            seleccionadoSpan.textContent = 'Seleccionar';
+        
+        // Inicializar valor del input hidden y texto mostrado
+        function inicializarSeleccion() {
+            if (!checkBoxes.length || !seleccionadoSpan || !inputHidden) return;
+            
+            const opcionesMarcadas = Array.from(checkBoxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+            
+            if (opcionesMarcadas.length === checkBoxes.length) {
+                seleccionadoSpan.textContent = 'Todos';
+            } else if (opcionesMarcadas.length > 0) {
+                seleccionadoSpan.textContent = opcionesMarcadas.map(op => op.charAt(0).toUpperCase() + op.slice(1)).join(', ');
+            } else {
+                seleccionadoSpan.textContent = 'Seleccionar';
+            }
+            
+            inputHidden.value = opcionesMarcadas.join(',');
+            validarCampo(inputHidden);
         }
-
-        inputHidden.value = opcionesMarcadas.join(',');
-
-        validarCampo(inputHidden);
-    }
-});
-
-// Cerrar dropdown al hacer clic fuera
-document.addEventListener('click', (event) => {
-    if (!dropdownSimulado.contains(event.target)) {
-        dropdownLista.classList.remove('open');
-        dropdownHeader.style.borderColor = '';
-        dropdownHeader.style.boxShadow = '';
-    }
-});
-
-// Manejo del formulario
-formulario.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const camposRequeridos = formulario.querySelectorAll('[required]');
-    let valido = true;
-
-    camposRequeridos.forEach(campo => {
-        if (!validarCampo(campo)) {
-            valido = false;
+        
+        // Configurar eventos del dropdown si existe
+        if (dropdownHeader && dropdownLista) {
+            dropdownHeader.addEventListener('click', () => {
+                dropdownLista.classList.toggle('open');
+                if (dropdownLista.classList.contains('open')) {
+                    dropdownHeader.style.borderColor = '#00008F';
+                    dropdownHeader.style.boxShadow = '0 0 5px #00008F';
+                } else {
+                    dropdownHeader.style.borderColor = '';
+                    dropdownHeader.style.boxShadow = '';
+                }
+            });
+            
+            dropdownLista.addEventListener('change', (event) => {
+                if (event.target.type === 'checkbox') {
+                    const opcionesMarcadas = Array.from(checkBoxes)
+                        .filter(cb => cb.checked)
+                        .map(cb => cb.value);
+                    
+                    if (opcionesMarcadas.length === checkBoxes.length) {
+                        seleccionadoSpan.textContent = 'Todos';
+                    } else if (opcionesMarcadas.length > 0) {
+                        seleccionadoSpan.textContent = opcionesMarcadas.map(op => op.charAt(0).toUpperCase() + op.slice(1)).join(', ');
+                    } else {
+                        seleccionadoSpan.textContent = 'Seleccionar';
+                    }
+                    
+                    inputHidden.value = opcionesMarcadas.join(',');
+                    validarCampo(inputHidden);
+                }
+            });
+            
+            document.addEventListener('click', (event) => {
+                if (!dropdownSimulado.contains(event.target)) {
+                    dropdownLista.classList.remove('open');
+                    dropdownHeader.style.borderColor = '';
+                    dropdownHeader.style.boxShadow = '';
+                }
+            });
         }
-    });
-
-    if (!valido) {
-        alert("Por favor, complete todos los campos obligatorios correctamente.");
-        return;
+        
+        // Manejo del formulario
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const camposRequeridos = formulario.querySelectorAll('[required]');
+            let valido = true;
+            
+            camposRequeridos.forEach(campo => {
+                if (campo.type === 'checkbox' || campo.id === 'Metodo_Contacto') {
+                    if (!validarCampo(campo)) {
+                        valido = false;
+                    }
+                } else if (!validarCampo(campo)) {
+                    valido = false;
+                }
+            });
+            
+            if (!valido) {
+                alert("Por favor, complete todos los campos obligatorios correctamente.");
+                return;
+            }
+            
+            console.log('Formulario enviado');
+            
+            // Mostrar mensaje de éxito
+            const mensajeExito = document.createElement('div');
+            mensajeExito.className = 'mensaje-exito';
+            mensajeExito.textContent = '¡Gracias! Tu mensaje ha sido enviado correctamente.';
+            formulario.parentNode.insertBefore(mensajeExito, formulario.nextSibling);
+            
+            // Limpiar formulario
+            formulario.reset();
+            formulario.querySelectorAll('.error, .valid').forEach(el => {
+                el.classList.remove('error', 'valid');
+            });
+            formulario.querySelectorAll('.error-message').forEach(el => {
+                el.textContent = '';
+            });
+            if (dropdownSimulado) {
+                dropdownSimulado.classList.remove('error', 'valid');
+            }
+            inicializarSeleccion();
+            
+            // Ocultar formulario y mostrar botón
+            if (formContainer && botonUnirme) {
+                formContainer.classList.add('oculto');
+                botonUnirme.classList.remove('oculto');
+            }
+            
+            setTimeout(() => {
+                mensajeExito.remove();
+            }, 5000);
+        });
+        
+        // Validación en tiempo real
+        const campos = formulario.querySelectorAll('input:not([type="checkbox"]), select, textarea');
+        campos.forEach(campo => {
+            campo.addEventListener('blur', function() {
+                validarCampo(this);
+            });
+            campo.addEventListener('input', function() {
+                validarCampo(this);
+            });
+        });
+        
+        const checkboxesForm = formulario.querySelectorAll('input[type="checkbox"]');
+        checkboxesForm.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                validarCampo(this);
+            });
+        });
+        
+        // Inicializar selección al cargar la página
+        inicializarSeleccion();
     }
-
-    console.log('Formulario enviado');
-    formContainer.classList.add('oculto');
-    botonUnirme.classList.remove('oculto');
-});
-
-// Manejo del formulario flotante
-document.addEventListener("DOMContentLoaded", function () {
-    formContainer.classList.remove("oculto");
-    botonUnirme.classList.add("oculto");
-
-    cerrarFormulario.addEventListener("click", function () {
-        formContainer.classList.add("oculto");
-        botonUnirme.classList.remove("oculto");
-    });
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 200) {
+    
+    // Manejo del formulario flotante
+    if (formContainer && botonUnirme && cerrarFormulario) {
+        formContainer.classList.remove("oculto");
+        botonUnirme.classList.add("oculto");
+        
+        cerrarFormulario.addEventListener("click", function () {
             formContainer.classList.add("oculto");
             botonUnirme.classList.remove("oculto");
-        } else {
+        });
+        
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 200) {
+                formContainer.classList.add("oculto");
+                botonUnirme.classList.remove("oculto");
+            } else {
+                formContainer.classList.remove("oculto");
+                botonUnirme.classList.add("oculto");
+            }
+        });
+        
+        botonUnirme.addEventListener("click", function () {
             formContainer.classList.remove("oculto");
             botonUnirme.classList.add("oculto");
-        }
-    });
-
-    botonUnirme.addEventListener("click", function () {
-        formContainer.classList.toggle("oculto");
-        botonUnirme.classList.toggle("oculto");
-    });
-});
-
-// Validación en tiempo real
-const campos = formulario.querySelectorAll('input, select, textarea');
-campos.forEach(campo => {
-    campo.addEventListener('blur', function() {
-        validarCampo(this);
-    });
-});
-
-// Inicializar selección al cargar la página
-inicializarSeleccion();
-
-// Dropdown footer
-document.addEventListener('DOMContentLoaded', function() {
+        });
+    }
+    
+    // Dropdown footer
     const dropdownColumns = document.querySelectorAll('.mobile-dropdown');
-
     dropdownColumns.forEach(currentColumn => {
         const title = currentColumn.querySelector('.dropdown-title');
         const list = currentColumn.querySelector('.dropdown-list');
-
+        
         if (title && list) {
             title.addEventListener('click', function() {
                 dropdownColumns.forEach(otherColumn => {
@@ -1699,7 +1847,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+    
+    // ELIMINADO: Todo el código específico de iOS que causaba problemas
+    // La solución está ahora completamente en CSS
 });
 </script>
-</body>
-</html>
+
+
+
+    </body>
+    </html>
